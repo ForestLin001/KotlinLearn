@@ -7,9 +7,9 @@ package com.kotlin.leran.design.adapter.obj
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-
  */
-class ObjAdaptee{
+class ObjAdaptee {
 
-    fun operatorFirst() : String{
+    fun operatorFirst(): String {
         return "object first method"
     }
 

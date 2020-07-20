@@ -19,9 +19,9 @@ import com.kotlin.leran.design.factory.simple.demo3.ConcreteProduce
  * Version        :  v-1.0.1
  */
 
-class TestFactory{
+class TestFactory {
 
-    fun test(){
+    fun test() {
         testSimpleDemo1()
         testSimpleDemo2()
         testSimpleDemo3()
@@ -32,7 +32,7 @@ class TestFactory{
 
     }
 
-    private fun testSimpleDemo1(){
+    private fun testSimpleDemo1() {
         // 普通工厂测试
         val firstFruit = FirstFruitFactory().createFactory("apple")
         firstFruit?.harvest()
@@ -49,7 +49,7 @@ class TestFactory{
     /**
      * 省略了抽象角色的工厂类 测试
      */
-    private fun testSimpleDemo2(){
+    private fun testSimpleDemo2() {
         val firstProduce = ProduceFactory().createProduce()
         firstProduce.update()
     }
@@ -57,7 +57,7 @@ class TestFactory{
     /**
      *  抽象角色、工厂类、具体角色合并到一起 即自身创建自身（外部不用new创建） 测试
      */
-    private fun testSimpleDemo3(){
+    private fun testSimpleDemo3() {
         val secondProduce = ConcreteProduce.createProduce()
         secondProduce.show()
     }
@@ -65,7 +65,7 @@ class TestFactory{
     /**
      * 测试简易工厂方法模式
      */
-    private fun testMethodDemo1(){
+    private fun testMethodDemo1() {
         val factoryA = FactoryA()
         val produceA = factoryA.createProduce()
         produceA.showTest("ProduceA")
@@ -78,7 +78,7 @@ class TestFactory{
     /**
      * 测试复杂工厂方法模式
      */
-    private fun testMethodDemo2(){
+    private fun testMethodDemo2() {
         val huaweiFactory = HuaweiFactory()
         val huaweiPhone = huaweiFactory.createPhone("P30 mate", "2019-9-12")
         huaweiPhone.aboutSelf()
@@ -91,7 +91,6 @@ class TestFactory{
         val applePhone = americaFactory.createPhone("iPhone 11 max ", "2019-9-12")
         applePhone.aboutSelf()
     }
-
 
 
 }

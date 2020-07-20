@@ -10,9 +10,9 @@ import kotlinx.coroutines.*
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class Basis{
+class Basis {
 
-    suspend fun test(){
+    suspend fun test() {
 //        first()
 //        second()
 //        third()
@@ -30,7 +30,7 @@ class Basis{
     /**
      * 第一个协程程序
      */
-    private fun first(){
+    private fun first() {
         GlobalScope.launch {
             delay(1000)
             println("协程")
@@ -42,8 +42,8 @@ class Basis{
     /**
      * 用Thread替换协程，达到相同的效果
      */
-    private fun second(){
-        Thread{
+    private fun second() {
+        Thread {
             Thread.sleep(1000)
             println("协程")
         }.start()
@@ -54,7 +54,7 @@ class Basis{
     /**
      * 桥接阻塞
      */
-    private fun third(){
+    private fun third() {
         GlobalScope.launch {
             delay(1000)
             println("协程")
@@ -80,7 +80,7 @@ class Basis{
     /**
      * 等待一个作业
      */
-    private suspend fun five(){
+    private suspend fun five() {
 
         val job = GlobalScope.launch {
             delay(1000)
@@ -111,7 +111,7 @@ class Basis{
             println("Task from runBlocking")
         }
 
-        coroutineScope{
+        coroutineScope {
             launch {
                 delay(1500)
                 println("Task from nested launch")
@@ -141,7 +141,7 @@ class Basis{
             [times] 循环次数
             [action] 动作（事情）
           */
-        repeat(100_000){
+        repeat(100_000) {
             launch {
                 delay(1000)
                 print(".")
@@ -152,20 +152,20 @@ class Basis{
     /**
      * 用线程作对比
      */
-    private fun newNine(){
-        repeat(100_000){
+    private fun newNine() {
+        repeat(100_000) {
             Thread {
                 print(".")
             }.start()
         }
     }
 
-    private fun ten(){
+    private fun ten() {
 
         println("start")
 
-        run{
-            repeat(50){
+        run {
+            repeat(50) {
                 if (it == 20) return@repeat
                 println("running $it")
             }
@@ -174,11 +174,11 @@ class Basis{
         println("stop")
     }
 
-    private fun newTen(){
+    private fun newTen() {
         println("start")
 
-        run{
-            repeat(50){
+        run {
+            repeat(50) {
                 if (it == 20) return@run
                 println("running $it")
             }
@@ -190,7 +190,7 @@ class Basis{
     /**
      * 提取函数重构
      */
-    private suspend fun doWorld(world : String){
+    private suspend fun doWorld(world: String) {
         delay(1000)
         println(world)
     }

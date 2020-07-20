@@ -6,19 +6,19 @@ package com.kotlin.leran.basis
  * time :    2017/9/1  00:50
  * version : 1.0.1
  */
-class NoteDemo{
+class NoteDemo {
 
     init {
         println("其实kotlin与java的注释是几乎相同的，都支持单行注释和多行注释（块注释）.\n 不过与java不同的kotlin中的块注释可以级联")
     }
 
-    private fun note1(){
+    private fun note1() {
         // 1. 单行注释
         println("单行注释写法:")
         println("两个斜杠开头表示单行注释（'//'）！")
     }
 
-    private fun note2(){
+    private fun note2() {
         /*
             2. 多行注释
          */
@@ -26,7 +26,7 @@ class NoteDemo{
         println("以斜杠加星号开头（/*），同时以星号加斜杠结尾（*/），中间这是要注释的代码块！")
     }
 
-    private fun note3(){
+    private fun note3() {
         /*
             第一层块注释
            /*
@@ -44,15 +44,15 @@ class NoteDemo{
      * [a] 参数a
      * [b] 参数b
      */
-    private fun note4(a : Int, b : Int){
+    private fun note4(a: Int, b: Int) {
         println("result = ${a + b}")
     }
 
-    fun test(){
+    fun test() {
         note1()
         note2()
         note3()
-        note4(1,2)
+        note4(1, 2)
     }
 
 }

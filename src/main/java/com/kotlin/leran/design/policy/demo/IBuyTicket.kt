@@ -7,9 +7,9 @@ package com.kotlin.leran.design.policy.demo
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-interface IBuyTicket{
+interface IBuyTicket {
 
-    companion object{
+    companion object {
 
         // 汽车票
         const val TYPE_CAR = 0
@@ -35,10 +35,10 @@ interface IBuyTicket{
      * 获取票价
      * [travel]  行程
      */
-    fun getTicketMoney(travel : String, price : Double) : Double
+    fun getTicketMoney(travel: String, price: Double): Double
 
     /**
      * 获取车票类型
      */
-    fun getType() : Int
+    fun getType(): Int
 }

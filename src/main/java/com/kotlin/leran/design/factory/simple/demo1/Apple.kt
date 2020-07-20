@@ -7,7 +7,7 @@ package com.kotlin.leran.design.factory.simple.demo1
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class Apple(private val color : String, override var price: Double) : IFruit {
+class Apple(private val color: String, override var price: Double) : IFruit {
 
     override fun grow() {
         println("grow apple...")

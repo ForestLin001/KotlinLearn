@@ -10,7 +10,7 @@ import java.lang.reflect.Method
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class ProxyHandler(private val target : IDynamicTicket) : InvocationHandler{
+class ProxyHandler(private val target: IDynamicTicket) : InvocationHandler {
 
     /**
      * [proxy]  代理对象
@@ -22,17 +22,17 @@ class ProxyHandler(private val target : IDynamicTicket) : InvocationHandler{
         if (args == null) return null
 
         doBefore()
-        val any =  method?.invoke(target, args[0], args[1])
+        val any = method?.invoke(target, args[0], args[1])
         doAfter()
 
         return any
     }
 
-    private fun doBefore(){
+    private fun doBefore() {
         println("去代售点")
     }
 
-    private fun doAfter(){
+    private fun doAfter() {
         println("买票成功了")
     }
 

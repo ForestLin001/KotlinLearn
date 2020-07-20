@@ -11,9 +11,9 @@ import com.kotlin.leran.design.observer.demo1.ConcreteSubject
  * Version        :  v-1.0.1
  */
 
-class TestObserver{
+class TestObserver {
 
-    fun test(){
+    fun test() {
         testObserverDemo1()
         testObserverDemo2()
     }
@@ -21,7 +21,7 @@ class TestObserver{
     /**
      * 测试观察者概念demo
      */
-    private fun testObserverDemo1(){
+    private fun testObserverDemo1() {
         val subject = ConcreteSubject()
         val observerFirst = ConcreteObserver("观察者对象1")
         val observerSecond = ConcreteObserver("观察者对象2")
@@ -37,6 +37,6 @@ class TestObserver{
     /**
      * 测试观察者模式实例
      */
-    private fun testObserverDemo2(){}
+    private fun testObserverDemo2() {}
 
 }

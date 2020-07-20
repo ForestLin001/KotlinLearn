@@ -14,6 +14,6 @@ interface IStaticMoney {
      *  [count] 人数
      *  [price] 单价
      */
-    fun giveMoney(count : Int, price : Int)
+    fun giveMoney(count: Int, price: Int)
 
 }

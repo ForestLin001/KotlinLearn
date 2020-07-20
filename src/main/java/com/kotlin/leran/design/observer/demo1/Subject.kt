@@ -7,7 +7,7 @@ package com.kotlin.leran.design.observer.demo1
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-interface Subject{
+interface Subject {
 
     /**
      * 添加观察者

@@ -7,9 +7,9 @@ package com.kotlin.leran.design.singleton
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class SecondInstance private constructor(){
+class SecondInstance private constructor() {
 
-    companion object{
+    companion object {
         // 直接初始化
         val sInstance: SecondInstance = SecondInstance()
     }
@@ -17,7 +17,7 @@ class SecondInstance private constructor(){
     /**
      * 测试函数
      */
-    fun testInstance(){
+    fun testInstance() {
         println("${javaClass.simpleName}初始化成功，并调用了测试函数")
     }
 

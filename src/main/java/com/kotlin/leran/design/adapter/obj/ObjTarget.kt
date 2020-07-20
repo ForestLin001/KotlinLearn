@@ -8,17 +8,17 @@ package com.kotlin.leran.design.adapter.obj
  * Version        :  v-1.0.1
  *
  */
-interface ObjTarget{
+interface ObjTarget {
 
     /**
      * 操作1
      */
-    fun operatorFirst() : String
+    fun operatorFirst(): String
 
     /**
      * 操作2
      */
-    fun operatorSecond() : String
+    fun operatorSecond(): String
 
 }
 

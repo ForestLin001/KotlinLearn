@@ -6,23 +6,23 @@ package com.kotlin.leran.cls.classDemo
  * time :    2017/12/13  0:43
  * version : v1.0.1
  */
-class Other{    // 外部类
+class Other {    // 外部类
     val numOther = 1
-    lateinit var listener : OnClickListener
+    lateinit var listener: OnClickListener
 
     class Nested {  // 嵌套类
-        fun init(){
+        fun init() {
             println("init")
         }
     }
 
-    fun partMethod(){
-        var name : String = "partMethod"
+    fun partMethod() {
+        var name: String = "partMethod"
 
-        class Part{
-            var numPart : Int = 2
+        class Part {
+            var numPart: Int = 2
 
-            fun test(){
+            fun test() {
                 name = "demo1"
                 numPart = 5
                 println("我是局部类中的方法")
@@ -35,34 +35,34 @@ class Other{    // 外部类
         println("name = $name \t numPart = " + part.numPart + "\t numOther = $numOther")
     }
 
-    inner class InnerClass{
+    inner class InnerClass {
         val name = "InnerClass"
-        fun init(){
+        fun init() {
             println("我是内部类")
         }
     }
 
-    fun setOnClickListener(listener : OnClickListener){
+    fun setOnClickListener(listener: OnClickListener) {
         this.listener = listener
     }
 
-    fun setOnClickListener2(listener: OnClickListener) : OnClickListener{
+    fun setOnClickListener2(listener: OnClickListener): OnClickListener {
         this.listener = listener
         listener.onItemClick("sssss")
         return listener
     }
 
-    fun testListener(){
+    fun testListener() {
         listener.onItemClick("我是匿名内部类的测试方法")
     }
 
-    fun testListener2(){
+    fun testListener2() {
         listener.onItemClick("sss")
     }
 }
 
-interface OnClickListener{
-    fun onItemClick(str : String)
+interface OnClickListener {
+    fun onItemClick(str: String)
 }
 
 class InnerClassDemo {

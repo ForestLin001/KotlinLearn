@@ -1,6 +1,9 @@
 package com.kotlin.leran.coroutines
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.cancelAndJoin
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 /**
  * Desc           :  协程取消测试
@@ -9,15 +12,15 @@ import kotlinx.coroutines.*
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class CancelCoroutineDemo{
+class CancelCoroutineDemo {
 
-    fun test(){
+    fun test() {
         first()
     }
 
     private fun first() = runBlocking {
         val job = launch {
-            repeat(50){
+            repeat(50) {
                 println("job: I'm sleeping $it ...")
                 delay(500)
             }
@@ -36,7 +39,7 @@ class CancelCoroutineDemo{
     }
 
     private fun third() = runBlocking {
-        
+
     }
 
 }

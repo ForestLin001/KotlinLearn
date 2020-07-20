@@ -7,20 +7,20 @@ package com.kotlin.leran.design.singleton
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class SixthInstance private constructor(){
+class SixthInstance private constructor() {
 
-    companion object{
+    companion object {
         fun getInstance() = Holder.sInstance
     }
 
-    private object Holder{
+    private object Holder {
         val sInstance = SixthInstance()
     }
 
     /**
      * 测试函数
      */
-    fun testInstance(){
+    fun testInstance() {
         println("${javaClass.simpleName}初始化成功，并调用了测试函数")
     }
 

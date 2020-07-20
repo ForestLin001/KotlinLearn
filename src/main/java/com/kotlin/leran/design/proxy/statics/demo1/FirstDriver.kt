@@ -8,9 +8,9 @@ package com.kotlin.leran.design.proxy.statics.demo1
  * Version        :  v-1.0.0
  */
 
-class FirstDriver : Driver(){
+class FirstDriver : Driver() {
 
-    override fun giveMoney(count : Int, price : Int) {
+    override fun giveMoney(count: Int, price: Int) {
         doBefore()
 
         println("这趟车坐了${count}个人, 每个人${price}元钱")
@@ -20,11 +20,11 @@ class FirstDriver : Driver(){
         doAfter()
     }
 
-    private fun doBefore(){
+    private fun doBefore() {
         println("开门上车，向司机拿表")
     }
 
-    private fun doAfter(){
+    private fun doAfter() {
         println("填单，关门走人")
     }
 

@@ -7,9 +7,9 @@ package com.kotlin.leran.design.adapter.cls
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-
  */
-open class ClsAdaptee{
+open class ClsAdaptee {
 
-    open fun operatorFirst() : String{
+    open fun operatorFirst(): String {
         return "class first method"
     }
 

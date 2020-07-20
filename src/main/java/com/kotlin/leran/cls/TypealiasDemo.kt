@@ -23,55 +23,56 @@ typealias MapModelData<T> = MutableMap<String, BaseModel<T>>
 typealias Predicate<T> = (T) -> Boolean
 
 // 定义的高阶函数
-fun foo1(p : Predicate<Int>) = p(2)
-fun foo2(p : Predicate<String>) = p("demo1")
+fun foo1(p: Predicate<Int>) = p(2)
+fun foo2(p: Predicate<String>) = p("demo1")
 
-class DemoClassTestNest{
-    class A{
-        fun show(){
+class DemoClassTestNest {
+    class A {
+        fun show() {
             println("name : ${this.javaClass.simpleName}")
         }
     }
 
-    class B{
-        fun show(){
+    class B {
+        fun show() {
             println("name : ${this.javaClass.simpleName}")
         }
     }
 }
 
-class DemoClassTestInner{
-    class A{
-        fun show(){
+class DemoClassTestInner {
+    class A {
+        fun show() {
             println("name : ${this.javaClass.simpleName}")
         }
     }
 
-    class B{
-        fun show(){
+    class B {
+        fun show() {
             println("name : ${this.javaClass.simpleName}")
         }
-    }}
+    }
+}
 
-class TypeAliasDemoTestFirst{
-    fun show(){
+class TypeAliasDemoTestFirst {
+    fun show() {
         println("name : ${this.javaClass.simpleName}")
     }
 }
 
-class TypeAliasDemoTestSecond{
-    fun show(){
+class TypeAliasDemoTestSecond {
+    fun show() {
         println("name : ${this.javaClass.simpleName}")
     }
 }
 
-data class TestBean(val id : Int,
-                    val name : String,
-                    val `package` : String)
+data class TestBean(val id: Int,
+                    val name: String,
+                    val `package`: String)
 
-data class BaseModel<T>(val code : Int,
-                        val msg : String,
-                        val data : T){
+data class BaseModel<T>(val code: Int,
+                        val msg: String,
+                        val data: T) {
     override fun toString(): String {
         return "BaseModel(code=$code, msg='$msg', data=$data)"
     }

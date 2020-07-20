@@ -7,17 +7,17 @@ package com.kotlin.leran.design.factory.method.demo2
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-interface IChinaPhone : IPhone{
+interface IChinaPhone : IPhone {
 
     /**
      * 类型
      */
-    val type : String
+    val type: String
 
     /**
      * 生产时间
      */
-    val time : String
+    val time: String
 
     override fun createAddress() {
         println("Made in China")

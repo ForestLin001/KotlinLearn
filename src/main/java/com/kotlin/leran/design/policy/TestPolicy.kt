@@ -12,17 +12,17 @@ import com.kotlin.leran.design.policy.demo.PlaneTicket
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class TestPolicy{
+class TestPolicy {
 
-    fun test(type : Int){
+    fun test(type: Int) {
         testPolicyDemo(type)
     }
 
     /**
      * 测试策略类
      */
-    private fun testPolicyDemo(type : Int){
-        val ticket = when(type){
+    private fun testPolicyDemo(type: Int) {
+        val ticket = when (type) {
             IBuyTicket.TYPE_PLANE -> PlaneTicket()
             IBuyTicket.TYPE_GAO_TIE -> GaoTieTicket()
             IBuyTicket.TYPE_CAR -> CarTicket()

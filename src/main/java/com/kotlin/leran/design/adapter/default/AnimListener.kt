@@ -7,7 +7,7 @@ package com.kotlin.leran.design.adapter.default
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-
  */
-open class AnimListener : Listener{
+open class AnimListener : Listener {
     override fun onStart() {
         println("anim start")
     }

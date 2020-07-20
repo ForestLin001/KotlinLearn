@@ -6,24 +6,26 @@ package com.kotlin.leran.cls.classDemo
  * time :    2018/1/29  1:01
  * version : v1.0.1
  */
- 
-class Mime{
-    val id : String = "123"
-    var name : String? = "kotlin"
-    var age : Int? = 22
-    var sex : String? = "男"
-    var weight : Float = 120.3f
-    val s : Int by lazy { 10 }
 
-    var test1 : String = ""
+class Mime {
+    val id: String = "123"
+    var name: String? = "kotlin"
+    var age: Int? = 22
+    var sex: String? = "男"
+    var weight: Float = 120.3f
+    val s: Int by lazy { 10 }
+
+    var test1: String = ""
         get() = "123"
-        set(value){field = value}
+        set(value) {
+            field = value
+        }
 
-    val test2 : String
+    val test2: String
         get() = "123"
 
     private val size = 0
-    val isEmpty : Boolean
+    val isEmpty: Boolean
         get() = this.size == 0
 
     val num = 2
@@ -31,13 +33,13 @@ class Mime{
 
     var str1 = "demo1"
         get() = field
-        set(value){
+        set(value) {
             field = if (value.isNotEmpty()) value else "null"
         }
 
     var str2 = ""
         get() = "随意怎么修改都不会改变"
-        set(value){
+        set(value) {
             field = if (value.isNotEmpty()) value else "null"
         }
 
@@ -48,7 +50,7 @@ class Mime{
 
 class FieldDemo {
 
-    fun test(){
+    fun test() {
         val mime = Mime()
         println("id = ${mime.id} \t name = ${mime.name} \t age = ${mime.age} \t sex = ${mime.sex} \t weight = ${mime.weight}")
 

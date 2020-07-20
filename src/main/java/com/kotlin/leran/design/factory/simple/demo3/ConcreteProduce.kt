@@ -8,14 +8,14 @@ package com.kotlin.leran.design.factory.simple.demo3
  * Version        :  v-1.0.1
  */
 
-class ConcreteProduce{
+class ConcreteProduce {
 
-    companion object{
-        fun createProduce() : ConcreteProduce {
+    companion object {
+        fun createProduce(): ConcreteProduce {
             return ConcreteProduce()
         }
     }
 
-    fun show(){}
+    fun show() {}
 
 }

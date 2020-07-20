@@ -19,11 +19,11 @@ class OperatorStringDemo {
 
         // oldChar： 要替换的字符，newChar: 替换的字符
         println("-----------   1、replace()   ------------")
-        println(str.replace('a','A',true))
+        println(str.replace('a', 'A', true))
 
         println("-----------   2、replace()   ------------")
         // oldValue: 要替换的字符串， newValue: 替换的字符串
-        println(str.replace("Kotlin","Java"))
+        println(str.replace("Kotlin", "Java"))
 
         println("-----------   3、replace()   ------------")
         /*
@@ -33,7 +33,7 @@ class OperatorStringDemo {
 
          */
         val str2 = "1234a kotlin 5678 3 is 4"
-        println(str2.replace(Regex("[0-9]+"),"kotlin"))
+        println(str2.replace(Regex("[0-9]+"), "kotlin"))
 
         println("-----------   4、replace()   ------------")
         /*
@@ -46,29 +46,29 @@ class OperatorStringDemo {
 
         // replaceFirst
         println("-----------   replaceFirst()   ------------")
-        println(str.replaceFirst('a','A'))
-        println(str.replaceFirst( "Kotlin","Java"))
+        println(str.replaceFirst('a', 'A'))
+        println(str.replaceFirst("Kotlin", "Java"))
 
 
         // replaceBefore
         println("-----------   replaceBefore()   ------------")
-        println(str.replaceBefore('a',"AA"))
-        println(str.replaceBefore("Kotlin","Java"))
+        println(str.replaceBefore('a', "AA"))
+        println(str.replaceBefore("Kotlin", "Java"))
 
         // replaceBeforeLast
         println("-----------   replaceBeforeLast()   ------------")
-        println(str.replaceBeforeLast('a',"AA"))
-        println(str.replaceBeforeLast("Kotlin","Java"))
+        println(str.replaceBeforeLast('a', "AA"))
+        println(str.replaceBeforeLast("Kotlin", "Java"))
 
         // replaceAfter
         println("-----------   replaceAfter()   ------------")
-        println(str.replaceAfter('a',"AA"))
-        println(str.replaceAfter("Kotlin","Java"))
+        println(str.replaceAfter('a', "AA"))
+        println(str.replaceAfter("Kotlin", "Java"))
 
         // replaceAfterLast
         println("-----------   replaceAfterLast()   ------------")
-        println(str.replaceAfterLast('a',"AA"))
-        println(str.replaceAfterLast("Kotlin","Java"))
+        println(str.replaceAfterLast('a', "AA"))
+        println(str.replaceAfterLast("Kotlin", "Java"))
     }
 
     /**
@@ -78,14 +78,14 @@ class OperatorStringDemo {
         val str1 = "Kotlin is a very good programming language"
 
         val list1 = str1.split(' ')
-        for (str in list1){
+        for (str in list1) {
             print("$str \t")
         }
 
         println()
 
         val list2 = str1.split(" ")
-        for (str in list2){
+        for (str in list2) {
             print("$str \t")
         }
 
@@ -93,22 +93,22 @@ class OperatorStringDemo {
 
         val str2 = "1 kotlin 2 java 3 Lua 4 JavaScript"
         val list3 = str2.split(Regex("[0-9]+"))
-        for (str in list3){
+        for (str in list3) {
             print("$str \t")
         }
 
         println()
 
         val list4 = str2.split(Pattern.compile("[0-9]+"))
-        for (str in list4){
+        for (str in list4) {
             print("$str \t")
         }
 
         println()
 
         val str3 = "a b c d e f g h 2+3+4+5"
-        val list5 = str3.split(' ','+')
-        for (str in list5){
+        val list5 = str3.split(' ', '+')
+        for (str in list5) {
             print("$str \t")
         }
     }
@@ -120,11 +120,11 @@ class OperatorStringDemo {
         val str = "Kotlin is a very good programming language"
 
         println(str.substring(10))
-        println(str.substring(0,15))
-        println(str.substring(IntRange(0,15)))
+        println(str.substring(0, 15))
+        println(str.substring(IntRange(0, 15)))
 
-        println(str.subSequence(0,15))
-        println(str.subSequence(IntRange(0,15)))
+        println(str.subSequence(0, 15))
+        println(str.subSequence(IntRange(0, 15)))
     }
 
     private fun optStr() {
@@ -144,20 +144,20 @@ class OperatorStringDemo {
 
         println(str.startsWith('k'))
         println(str.startsWith("kot"))
-        println(str.startsWith("lin",3))
+        println(str.startsWith("lin", 3))
     }
 
     /**
      * 字符串查找
      */
-    private fun findStr(){
+    private fun findStr() {
 
         val str = "kotlin very good"
 
         println(str.first())
         println(str.first { it == 't' })
         println(str.firstOrNull())
-        println(str.firstOrNull{it == 't'})
+        println(str.firstOrNull { it == 't' })
         println(str.last())
         println(str.last { it == 'o' })
         println(str.lastOrNull())
@@ -165,8 +165,8 @@ class OperatorStringDemo {
 
         println(str.indexOfFirst { it == 'o' })
         println(str.indexOfLast { it == 'o' })
-        println(str.indexOf('o',0))
-        println(str.indexOf("very",0))
+        println(str.indexOf('o', 0))
+        println(str.indexOf("very", 0))
         println(str.lastIndexOf('o'))
         println(str.lastIndexOf("good"))
     }
@@ -174,7 +174,7 @@ class OperatorStringDemo {
     /**
      * 统计
      */
-    private fun getStrLength(){
+    private fun getStrLength() {
 
         val str = "kotlin very good"
 
@@ -193,9 +193,9 @@ class OperatorStringDemo {
     /**
      * 检测字符串是否为空，或空字符串，以及是否包含了空格
      */
-    private fun checkNullStr(){
+    private fun checkNullStr() {
 
-        val str : String? = "kotlin"
+        val str: String? = "kotlin"
 
         println(str?.isEmpty())
         println(str?.isNotEmpty())
@@ -206,7 +206,7 @@ class OperatorStringDemo {
 
     }
 
-    fun test(){
+    fun test() {
         checkNullStr()
         getStrLength()
         optStr()

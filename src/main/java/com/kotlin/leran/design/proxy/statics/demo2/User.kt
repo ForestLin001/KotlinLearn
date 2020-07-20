@@ -12,7 +12,7 @@ open class User : IStaticTicket {
     /**
      * 具体的业务逻辑
      */
-    override fun buyTicket(travel : String, price : Double) {
+    override fun buyTicket(travel: String, price: Double) {
         println("买票中")
         println("行程为：${travel}, 价格为：${price}元")
         println("...")

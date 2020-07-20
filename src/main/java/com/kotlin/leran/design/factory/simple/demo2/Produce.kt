@@ -7,16 +7,15 @@ package com.kotlin.leran.design.factory.simple.demo2
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-data class Produce(var name : String){
+data class Produce(var name: String) {
 
-    fun update(){
+    fun update() {
         println("更新产品 $name")
     }
 
 }
 
-interface IApple{
-
+interface IApple {
 
 
 }

@@ -8,12 +8,12 @@ package com.kotlin.leran.design.singleton
  * Version        :  v-1.0.1
  */
 
-object KotlinInstance{
+object KotlinInstance {
 
     /**
      * 测试函数
      */
-    fun testInstance(){
+    fun testInstance() {
         println("${javaClass.simpleName}初始化成功，并调用了测试函数")
     }
 

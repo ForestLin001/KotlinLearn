@@ -7,7 +7,7 @@ package com.kotlin.leran.design.factory.method.demo2
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class XiaoMiPhone(override val type: String, override val time: String) : IChinaPhone{
+class XiaoMiPhone(override val type: String, override val time: String) : IChinaPhone {
 
     override fun aboutSelf() {
         println("I`m XiaoMi Phone $type")

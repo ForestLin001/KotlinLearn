@@ -14,7 +14,7 @@ import com.kotlin.leran.design.adapter.obj.ObjAdapter
  */
 class TestAdapter {
 
-    fun test(){
+    fun test() {
         testClsAdapter()
         testDefaultAdapter()
         testObjAdapter()
@@ -23,7 +23,7 @@ class TestAdapter {
     /**
      * 缺省类适配器模式
      */
-    private fun testClsAdapter(){
+    private fun testClsAdapter() {
         val target = ClsAdapter()
         println(target.operatorFirst())
         println(target.operatorSecond())
@@ -32,7 +32,7 @@ class TestAdapter {
     /**
      * 测试缺省/模式的适配器模式
      */
-    private fun testDefaultAdapter(){
+    private fun testDefaultAdapter() {
         val listener = MyAnimListener()
         listener.onStart()
         listener.onResume()
@@ -44,7 +44,7 @@ class TestAdapter {
     /**
      * 测试对象类适配器模式
      */
-    private fun testObjAdapter(){
+    private fun testObjAdapter() {
         val adaptee = ObjAdaptee()
         val target = ObjAdapter(adaptee)
         println(target.operatorFirst())

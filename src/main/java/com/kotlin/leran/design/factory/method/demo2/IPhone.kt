@@ -7,7 +7,7 @@ package com.kotlin.leran.design.factory.method.demo2
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-interface IPhone{
+interface IPhone {
 
     /**
      * 阐述自己

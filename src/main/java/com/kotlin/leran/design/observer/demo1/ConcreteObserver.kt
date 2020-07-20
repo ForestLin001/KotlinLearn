@@ -7,7 +7,7 @@ package com.kotlin.leran.design.observer.demo1
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class ConcreteObserver(val name : String) : Observer{
+class ConcreteObserver(val name: String) : Observer {
 
     override fun response() {
         println("$name 收到了通知")

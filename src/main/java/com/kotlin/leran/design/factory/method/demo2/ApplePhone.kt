@@ -7,7 +7,7 @@ package com.kotlin.leran.design.factory.method.demo2
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class ApplePhone(val type : String, val time : String) : IPhone{
+class ApplePhone(val type: String, val time: String) : IPhone {
 
     override fun aboutSelf() {
         println("I`m Apple Phone $type")

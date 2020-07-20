@@ -7,7 +7,7 @@ package com.kotlin.leran.basis
  * version : 1.0.1
  */
 
-class VariableAndConstantDemo{
+class VariableAndConstantDemo {
 
     /**
      * 基础变量的定义及用法
@@ -45,7 +45,7 @@ class VariableAndConstantDemo{
      */
     private fun classVariable() {
 
-        class Test1{
+        class Test1 {
 
             // 定义属性, 再类中一定要初始化
             // var/val varA : Int   这样会报错，因为必须初始化，再函数以及顶层声明的时候没有此限制
@@ -63,12 +63,12 @@ class VariableAndConstantDemo{
 
         Test1()
 
-        class Test2{
+        class Test2 {
 
             // 声明可空变量
 
-            var varA : Int? = 0
-            val valA : Int? = null
+            var varA: Int? = 0
+            val valA: Int? = null
 
             init {
                 varA = 10
@@ -81,7 +81,7 @@ class VariableAndConstantDemo{
         Test2()
     }
 
-    fun test(){
+    fun test() {
         basisVariable()
         classVariable()
     }

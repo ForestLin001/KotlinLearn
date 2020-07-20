@@ -7,9 +7,9 @@ package com.kotlin.leran.design.proxy.dynamic.cglib
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-open class Car{
+open class Car {
 
-    fun buyCarTicket(travel : String, price : Double){
+    fun buyCarTicket(travel: String, price: Double) {
         println("我买汽车票, 行程为： ${travel}, 价格是：${price}元")
         println("买票中")
         println("...")

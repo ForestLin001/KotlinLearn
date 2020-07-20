@@ -18,9 +18,9 @@ import java.lang.reflect.Proxy
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class TestProxy{
+class TestProxy {
 
-    fun test(){
+    fun test() {
         testStaticsProxy()
         testJdkDynamicProxy()
         testCglibDynamicProxy()
@@ -29,7 +29,7 @@ class TestProxy{
     /**
      * 测试静态代理
      */
-    private fun testStaticsProxy(){
+    private fun testStaticsProxy() {
         val user = User()
         val planeProxy = PlaneProxy(user)
         planeProxy.buyTicket("深圳-重庆", 783.56)
@@ -39,16 +39,16 @@ class TestProxy{
 
         val driver = Driver()
         val driverProxy2 = MoneyProxy(driver)
-        driverProxy2.giveMoney(5,13)
+        driverProxy2.giveMoney(5, 13)
 
         val firstDriver = FirstDriver()
-        firstDriver.giveMoney(7,12)
+        firstDriver.giveMoney(7, 12)
     }
 
     /**
      * 测试动态代理
      */
-    private fun testJdkDynamicProxy(){
+    private fun testJdkDynamicProxy() {
         val railway = Railway()
         var handler = ProxyHandler(railway)
         val railwayProxy = Proxy.newProxyInstance(railway.javaClass.classLoader,
@@ -71,7 +71,7 @@ class TestProxy{
     /**
      * 测试动态代理
      */
-    private fun testCglibDynamicProxy(){
+    private fun testCglibDynamicProxy() {
         val car = Car()
         val carProxy = TestCglibFactory(car).creator()
         carProxy.buyCarTicket("深圳-广州", 137.5)

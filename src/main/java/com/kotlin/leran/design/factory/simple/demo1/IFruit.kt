@@ -8,7 +8,7 @@ package com.kotlin.leran.design.factory.simple.demo1
  * Version        :  v-1.0.1
  */
 
-interface IFruit{
+interface IFruit {
 
     /**
      * 生长
@@ -28,6 +28,6 @@ interface IFruit{
     /**
      * 价格
      */
-    var price : Double
+    var price: Double
 
 }

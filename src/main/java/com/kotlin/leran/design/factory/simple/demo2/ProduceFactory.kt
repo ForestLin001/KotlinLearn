@@ -8,9 +8,9 @@ package com.kotlin.leran.design.factory.simple.demo2
  * Version        :  v-1.0.1
  */
 
-class ProduceFactory{
+class ProduceFactory {
 
-    fun createProduce() : Produce {
+    fun createProduce(): Produce {
         return Produce("first produce")
     }
 

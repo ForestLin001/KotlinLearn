@@ -7,7 +7,7 @@ package com.kotlin.leran.design.adapter.obj
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-
  */
-class ObjAdapter(private var adaptee: ObjAdaptee) : ObjTarget{
+class ObjAdapter(private var adaptee: ObjAdaptee) : ObjTarget {
 
     override fun operatorFirst(): String {
         return adaptee.operatorFirst().plus("adapter success!")

@@ -7,11 +7,11 @@ package com.kotlin.leran.design.factory.method.demo1
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-interface IFactory{
+interface IFactory {
 
     /**
      *  创建产品对象
      */
-    fun createProduce() : IProduce
+    fun createProduce(): IProduce
 
 }

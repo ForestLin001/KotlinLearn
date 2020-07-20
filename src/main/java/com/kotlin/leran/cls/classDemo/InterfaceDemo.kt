@@ -11,7 +11,7 @@ package com.kotlin.leran.cls.classDemo
 /**
  * 接口声明
  */
-interface Demo1Interface{
+interface Demo1Interface {
     // 定义的方法
     fun fun1()
 }
@@ -28,7 +28,7 @@ class Demo1 : Demo1Interface {
 /**
  * 接口的方法使用
  */
-interface Demo2Interface{
+interface Demo2Interface {
 
     /**
      * 定义一个无参数无返回值的方法
@@ -43,27 +43,27 @@ interface Demo2Interface{
     /**
      * 定义一个有参数有返回值的方法
      */
-    fun fun3(num: Int) : Int
+    fun fun3(num: Int): Int
 
     // 下面的两个方法是有结构体， 故可以不重写
 
     /**
      * 定义一个无参数有返回值的方法
      */
-    fun fun4() : String{
+    fun fun4(): String {
         return "fun4"
     }
 
     /**
      * 定义一个无结构体函数，大括号是可以省略的
      */
-    fun fun5(){
+    fun fun5() {
         // 如果函数中不存在表达式，大括号可以省略。
         // 如fun1一样
     }
 }
 
-class Demo2 : Demo2Interface{
+class Demo2 : Demo2Interface {
 
     override fun fun1() {
         println("我是fun1()方法")
@@ -101,10 +101,10 @@ class Demo2 : Demo2Interface{
 /**
  * 接口中的属性使用
  */
-interface Demo3Interface{
+interface Demo3Interface {
     val num1: Int
 
-    val num2 : Int
+    val num2: Int
 
     // 声明比那俩和提供默认值
     // 注意： val num3: Int = 3  这种方式不提供，为直接报错的
@@ -114,7 +114,7 @@ interface Demo3Interface{
     val num4: Int
 }
 
-class Demo3(override val num1: Int, override val num2: Int) : Demo3Interface{
+class Demo3(override val num1: Int, override val num2: Int) : Demo3Interface {
 
     // 提供访问器实现
     override val num3: Int
@@ -123,11 +123,11 @@ class Demo3(override val num1: Int, override val num2: Int) : Demo3Interface{
     // 手动赋值
     override var num4: Int = 4
 
-    fun sum() : Int{
+    fun sum(): Int {
         return num1 + num2
     }
 
-    fun result() : Int{
+    fun result(): Int {
         return num3 + num4
     }
 }
@@ -135,27 +135,27 @@ class Demo3(override val num1: Int, override val num2: Int) : Demo3Interface{
 /**
  *  接口的冲突问题解决
  */
-interface Demo4InterfaceOne{
-    fun fun1(){
+interface Demo4InterfaceOne {
+    fun fun1() {
         println("我是Demo4InterfaceOne中的fun1()")
     }
 
-    fun fun2(){
+    fun fun2() {
         println("我是Demo4InterfaceOne中的fun2()")
     }
 }
 
-interface Demo4InterfaceTwo{
-    fun fun1(){
+interface Demo4InterfaceTwo {
+    fun fun1() {
         println("我是Demo4InterfaceTwo中的fun1()")
     }
 
-    fun fun2(){
+    fun fun2() {
         println("我是Demo4InterfaceTwo中的fun2()")
     }
 }
 
-class Demo4 : Demo4InterfaceOne,Demo4InterfaceTwo{
+class Demo4 : Demo4InterfaceOne, Demo4InterfaceTwo {
 
     override fun fun1() {
         super<Demo4InterfaceOne>.fun1()
@@ -169,9 +169,9 @@ class Demo4 : Demo4InterfaceOne,Demo4InterfaceTwo{
 
 }
 
-class InterfaeDemo{
+class InterfaeDemo {
 
-    fun test(){
+    fun test() {
         val demo1 = Demo1()
         demo1.fun1()
 
@@ -184,7 +184,7 @@ class InterfaeDemo{
         //可以不重写该方法直接调用
         demo2.fun5()
 
-        val demo = Demo3(1,2)
+        val demo = Demo3(1, 2)
         println(demo.sum())
 
         println(demo.result())

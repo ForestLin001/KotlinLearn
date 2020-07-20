@@ -7,7 +7,7 @@ package com.kotlin.leran.design.adapter.default
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-
  */
-interface Listener{
+interface Listener {
 
     /**
      * 开始

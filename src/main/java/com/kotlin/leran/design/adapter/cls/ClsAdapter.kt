@@ -7,7 +7,7 @@ package com.kotlin.leran.design.adapter.cls
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-
  */
-class ClsAdapter : ClsAdaptee(), ClsTarget{
+class ClsAdapter : ClsAdaptee(), ClsTarget {
 
     override fun operatorSecond(): String {
         return "class second method"

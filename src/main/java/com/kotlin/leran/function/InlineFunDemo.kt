@@ -10,14 +10,12 @@ package com.kotlin.leran.function
  */
 
 
-
-class InlineFunDemo{
-
+class InlineFunDemo {
 
 
 }
 
-fun main(){
+fun main() {
 }
 
 

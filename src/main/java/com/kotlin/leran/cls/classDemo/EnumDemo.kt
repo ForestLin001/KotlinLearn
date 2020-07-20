@@ -11,7 +11,7 @@ package com.kotlin.leran.cls.classDemo
 /**
  * 例：关于一个网络请求结果的枚举类
  */
-enum class State{
+enum class State {
     /*
          NORMAL : 正常
          NO_DATA : 数据为空
@@ -20,29 +20,29 @@ enum class State{
          OTHER : 其他
      */
 
-    NORMAL,NO_DATA,NO_INTERNET,ERROR,OTHER
+    NORMAL, NO_DATA, NO_INTERNET, ERROR, OTHER
 }
 
 /**
  * 关于枚举常量匿名函数的枚举类
  */
-enum class ConsoleColor(var argb : Int){
-    RED(0xFF0000){
+enum class ConsoleColor(var argb: Int) {
+    RED(0xFF0000) {
         override fun print() {
             println("我是枚举常量 RED ")
         }
     },
-    WHITE(0xFFFFFF){
+    WHITE(0xFFFFFF) {
         override fun print() {
             println("我是枚举常量 WHITE ")
         }
     },
-    BLACK(0x000000){
+    BLACK(0x000000) {
         override fun print() {
             println("我是枚举常量 BLACK ")
         }
     },
-    GREEN(0x00FF00){
+    GREEN(0x00FF00) {
         override fun print() {
             println("我是枚举常量 GREEN ")
         }
@@ -51,16 +51,16 @@ enum class ConsoleColor(var argb : Int){
     abstract fun print()
 }
 
-enum class Color(var argb : Int){
+enum class Color(var argb: Int) {
     RED(0xFF0000),
     WHITE(0xFFFFFF),
     BLACK(0x000000),
     GREEN(0x00FF00)
 }
 
-class EnumDemo{
+class EnumDemo {
 
-    fun test(){
+    fun test() {
         println("name = " + Color.RED.name + "\tordinal = " + Color.RED.ordinal)
         println("name = " + Color.WHITE.name + "\tordinal = " + Color.WHITE.ordinal)
         println("name = " + Color.BLACK.name + "\tordinal = " + Color.BLACK.ordinal)

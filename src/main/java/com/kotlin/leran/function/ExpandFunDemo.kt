@@ -8,6 +8,6 @@ package com.kotlin.leran.function
  * Version        :  v-1.0.1
  */
 
-class ExpandFunDemo{
+class ExpandFunDemo {
 
 }

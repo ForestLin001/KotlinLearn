@@ -7,19 +7,19 @@ package com.kotlin.leran.design.proxy.statics.demo1
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class MoneyProxy(private val proxy : IStaticMoney) : IStaticMoney{
+class MoneyProxy(private val proxy: IStaticMoney) : IStaticMoney {
 
-    override fun giveMoney(count : Int, price : Int) {
+    override fun giveMoney(count: Int, price: Int) {
         doBefore()
         proxy.giveMoney(count, price)
         doAfter()
     }
 
-    private fun doBefore(){
+    private fun doBefore() {
         println("开门上车，向司机拿表")
     }
 
-    private fun doAfter(){
+    private fun doAfter() {
         println("填单，关门走人")
     }
 

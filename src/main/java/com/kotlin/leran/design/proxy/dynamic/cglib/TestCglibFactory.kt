@@ -13,9 +13,9 @@ import java.lang.reflect.Method
  * Version        :  v-1.0.1
  */
 
-class TestCglibFactory(private val target: Car) : MethodInterceptor{
+class TestCglibFactory(private val target: Car) : MethodInterceptor {
 
-    fun creator() : Car{
+    fun creator(): Car {
         val enhancer = Enhancer()
         // 设置需要代理的对象 :  目标类(target) , 也是父类
         enhancer.setSuperclass(target.javaClass)
@@ -35,11 +35,11 @@ class TestCglibFactory(private val target: Car) : MethodInterceptor{
         return any
     }
 
-    private fun doBefore(){
+    private fun doBefore() {
         println("去代售点")
     }
 
-    private fun doAfter(){
+    private fun doAfter() {
         println("买票成功了")
     }
 

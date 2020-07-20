@@ -7,13 +7,13 @@ package com.kotlin.leran.design.factory.simple.demo1
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class FirstFruitFactory{
+class FirstFruitFactory {
 
     /**
      * 根据类型创建
      */
-    fun createFactory(type : String) : IFruit?{
-        return when(type){
+    fun createFactory(type: String): IFruit? {
+        return when (type) {
             "apple" -> Apple("red", 12.8)
             "banana" -> Banana(8.8)
             "grape" -> Grape(false, 15.98)

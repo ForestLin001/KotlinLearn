@@ -7,7 +7,7 @@ package com.kotlin.leran.basis
  * version : 1.0.1
  */
 
-class DataTypeDemo{
+class DataTypeDemo {
 
     /**
      * 数字类型
@@ -18,7 +18,7 @@ class DataTypeDemo{
      * 5. Float : 32位
      * 6. Double : 64位
      */
-    private fun numberType(){
+    private fun numberType() {
         val a: Byte = 2
         val b: Short = 2
         val c: Int = 2
@@ -54,7 +54,7 @@ class DataTypeDemo{
          */
         val numValue: Int = 127
         //装箱的过程
-        val numValueBox : Int? = numValue
+        val numValueBox: Int? = numValue
         println("装箱后： numValueBox => $numValueBox")
 
         /*
@@ -98,12 +98,12 @@ class DataTypeDemo{
          */
         val operaNum: Int = 4
 
-        val shlOperaNum = operaNum shl(2)
-        val shrOperaNum = operaNum shr(2)
-        val ushrOperaNum = operaNum ushr(2)
-        val andOperaNum = operaNum and(2)
-        val orOperaNum = operaNum or(2)
-        val xorOperaNum = operaNum xor(2)
+        val shlOperaNum = operaNum shl (2)
+        val shrOperaNum = operaNum shr (2)
+        val ushrOperaNum = operaNum ushr (2)
+        val andOperaNum = operaNum and (2)
+        val orOperaNum = operaNum or (2)
+        val xorOperaNum = operaNum xor (2)
         val invOperaNum = operaNum.inv()
 
         println("shlOperaNum => $shlOperaNum \n " +
@@ -119,7 +119,7 @@ class DataTypeDemo{
     /**
      * 字符型
      */
-    private fun charType(){
+    private fun charType() {
         //字符由Char类型表示，它不能直接同视为数字，不过可以显示转换
         val char1: Char = 'a'
         //char1 = 1        //=> 这句代码会直接出错
@@ -184,7 +184,7 @@ class DataTypeDemo{
     /**
      * Boolean型
      */
-    private fun booleanType(){
+    private fun booleanType() {
         /*
             定义：
          */
@@ -202,13 +202,13 @@ class DataTypeDemo{
         var result: Boolean
 
         /* 逻辑或操作 */
-        if (a || b){
+        if (a || b) {
             result = a || b
             println("a || b => $result")
         }
 
         /* 逻辑与操作 */
-        if (a && b){
+        if (a && b) {
             result = a && b
             println("a && b => $result")
         }
@@ -225,23 +225,23 @@ class DataTypeDemo{
     /**
      * 数组类型
      */
-    private fun arrayType(){
+    private fun arrayType() {
         /*
             kotlin中数组由Array<T>表示，可以去看看源码实现，里面就几个方法
             创建数组的3个函数
          */
 
         // 1. arrayOf() => 参数是一个可变参数的泛型对象
-        val arr1 = arrayOf(1,2,3,4,5) //等价于[1,2,3,4,5]
-        for (v in arr1){
+        val arr1 = arrayOf(1, 2, 3, 4, 5) //等价于[1,2,3,4,5]
+        for (v in arr1) {
             print(v)
             print("\t")
         }
 
         println()
 
-        val arr2 = arrayOf("0","2","3",'a',32.3f)
-        for (v in arr2){
+        val arr2 = arrayOf("0", "2", "3", 'a', 32.3f)
+        for (v in arr2) {
             print(v)
             print("\t")
         }
@@ -252,7 +252,7 @@ class DataTypeDemo{
         val arr3 = arrayOfNulls<Int>(3)
 
         //如若不予数组赋值则arr3[0]、arr3[1]、arr3[2]皆为null
-        for(v in arr3){
+        for (v in arr3) {
             print(v)
             print("\t")
         }
@@ -264,7 +264,7 @@ class DataTypeDemo{
         arr3[1] = 20
         arr3[2] = 30
 
-        for(v in arr3){
+        for (v in arr3) {
             print(v)
             print("\t")
         }
@@ -276,7 +276,7 @@ class DataTypeDemo{
              Array() => 第一个参数表示数组元素的个数，第二个参数则为使用其元素下标组成的表达式
         */
         val arr4 = Array(5) { index -> (index * 2).toString() }
-        for (v in arr4){
+        for (v in arr4) {
             print(v)
             print("\t")
         }
@@ -299,24 +299,24 @@ class DataTypeDemo{
             FloatArray
             DoubleArray
          */
-        val intArr: IntArray = intArrayOf(1,2,3,4,5)
-        for (number in intArr){
+        val intArr: IntArray = intArrayOf(1, 2, 3, 4, 5)
+        for (number in intArr) {
             print(number)
             print("\t")
         }
 
         println()
 
-        val charArr: CharArray = charArrayOf('a','1','b','c','3','d')
-        for (char in charArr){
+        val charArr: CharArray = charArrayOf('a', '1', 'b', 'c', '3', 'd')
+        for (char in charArr) {
             print(char)
             print("\t")
         }
 
         println()
 
-        val longArr: LongArray = longArrayOf(12L,1254L,123L,111L)
-        for (long in longArr){
+        val longArr: LongArray = longArrayOf(12L, 1254L, 123L, 111L)
+        for (long in longArr) {
             print(long)
             print("\t")
         }
@@ -325,13 +325,13 @@ class DataTypeDemo{
     /**
      * 字符串类型
      */
-    private fun stringType(){
+    private fun stringType() {
         // 1. 字符串由String类型表示。并且其是不可变的。字符串的元素可以通过索引操作的字符：s[i]来访问。可以使用for循环迭代字符串：
         val str: String = "kotlin"
         println("str => $str")
 
         //迭代
-        for (s in str){
+        for (s in str) {
             print(s)
             print("\t")
         }
@@ -375,7 +375,7 @@ class DataTypeDemo{
         println(text3)
     }
 
-    fun test(){
+    fun test() {
         numberType()
         booleanType()
         charType()

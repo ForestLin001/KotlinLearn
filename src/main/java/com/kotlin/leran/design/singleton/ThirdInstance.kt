@@ -7,14 +7,14 @@ package com.kotlin.leran.design.singleton
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class ThirdInstance private constructor(){
+class ThirdInstance private constructor() {
 
-    companion object{
-        private var sInstance : ThirdInstance? = null
+    companion object {
+        private var sInstance: ThirdInstance? = null
 
         @Synchronized
-        fun getInstance() : ThirdInstance?{
-            if (null == sInstance){
+        fun getInstance(): ThirdInstance? {
+            if (null == sInstance) {
                 sInstance = ThirdInstance()
             }
             return sInstance
@@ -24,7 +24,7 @@ class ThirdInstance private constructor(){
     /**
      * 测试函数
      */
-    fun testInstance(){
+    fun testInstance() {
         println("${javaClass.simpleName}初始化成功，并调用了测试函数")
     }
 

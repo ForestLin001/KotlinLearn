@@ -7,13 +7,14 @@ package com.kotlin.leran.design.singleton
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class FifthInstance private constructor(val name: String){
+class FifthInstance private constructor(val name: String) {
 
-    companion object{
+    companion object {
 
-        @Volatile private var sInstance : FifthInstance? = null
+        @Volatile
+        private var sInstance: FifthInstance? = null
 
-        fun getInstance(name : String) = sInstance ?: synchronized(this){
+        fun getInstance(name: String) = sInstance ?: synchronized(this) {
             sInstance ?: FifthInstance(name).also { sInstance = it }
         }
 
@@ -22,7 +23,7 @@ class FifthInstance private constructor(val name: String){
     /**
      * 测试函数
      */
-    fun testInstance(){
+    fun testInstance() {
         println("${javaClass.simpleName}初始化成功，并调用了测试函数")
     }
 

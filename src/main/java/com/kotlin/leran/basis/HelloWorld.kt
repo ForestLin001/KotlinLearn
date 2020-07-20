@@ -6,9 +6,9 @@ package com.kotlin.leran.basis
  * time :    2017/8/31  23:20
  * version : 1.0.1
  */
-class HelloWorld{
+class HelloWorld {
 
-    fun test(){
+    fun test() {
         println("Hello World !")
     }
 

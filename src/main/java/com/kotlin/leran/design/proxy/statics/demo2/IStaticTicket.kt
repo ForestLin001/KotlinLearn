@@ -14,6 +14,6 @@ interface IStaticTicket {
      * [travel] 行程
      * [price]  价格
      */
-    fun buyTicket(travel : String, price : Double)
+    fun buyTicket(travel: String, price: Double)
 
 }

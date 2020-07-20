@@ -9,7 +9,7 @@ package com.kotlin.leran.basis
 
 class OperatorDemo {
 
-    fun test(){
+    fun test() {
         unitaryOperator()
         unitaryCommonOperator()
         binaryOperator()
@@ -49,9 +49,9 @@ class OperatorDemo {
         val b = 5
 
         // 操作符实现
-        val s = 3 in a .. b     // true,因为3在区间[1,5]之内
+        val s = 3 in a..b     // true,因为3在区间[1,5]之内
         println("s = $s")
-        for (index in a .. b){
+        for (index in a..b) {
             print("index = $index \t")
         }
 
@@ -60,7 +60,7 @@ class OperatorDemo {
         // 操作符重载方式实现
         val t = 3 in a.rangeTo(b)
         println("t = $t")
-        for (index in a.rangeTo(b)){
+        for (index in a.rangeTo(b)) {
             print("index = $index \t")
         }
         println()
@@ -102,12 +102,12 @@ class OperatorDemo {
      * 对一个集合使用plus()和plusAssign()
      */
     private fun seniorBinaryOperator() {
-        var arrA = arrayListOf<String>("1","2","3","4")
-        var arrB = arrayListOf<String>("1","2","3","4")
+        var arrA = arrayListOf<String>("1", "2", "3", "4")
+        var arrB = arrayListOf<String>("1", "2", "3", "4")
 
         arrA.plusAssign(arrB)
 
-        for (a in arrA){
+        for (a in arrA) {
             print("$a \t")
         }
     }
@@ -122,7 +122,7 @@ class OperatorDemo {
 
         // 主要演示字符串的+=
         c += a
-        print("c = $c \t" )
+        print("c = $c \t")
 
         a += b
         print("a = $a \t")
@@ -173,7 +173,7 @@ class OperatorDemo {
     /**
      * 简单的二元操作
      */
-    private fun basicBinaryOperator(){
+    private fun basicBinaryOperator() {
         val a = 10
         val b = 2
         val c = "2"

@@ -1,10 +1,5 @@
 package com.kotlin.leran.design.factory.simple.demo1
 
-import com.kotlin.leran.design.factory.simple.demo1.Apple
-import com.kotlin.leran.design.factory.simple.demo1.Banana
-import com.kotlin.leran.design.factory.simple.demo1.Grape
-import com.kotlin.leran.design.factory.simple.demo1.IFruit
-
 /**
  * Desc           :  多个工厂方法模式
  * Author         :  Jetictors
@@ -12,26 +7,26 @@ import com.kotlin.leran.design.factory.simple.demo1.IFruit
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class SecondFruitFactory{
+class SecondFruitFactory {
 
     /**
      * 创建苹果
      */
-    fun createApple() : IFruit {
+    fun createApple(): IFruit {
         return Apple("green", 8.8)
     }
 
     /**
      * 创建香蕉
      */
-    fun createBanana() : IFruit {
+    fun createBanana(): IFruit {
         return Banana(5.5)
     }
 
     /**
      * 创建葡萄
      */
-    fun createGrape() : IFruit {
+    fun createGrape(): IFruit {
         return Grape(true, 12.8)
     }
 

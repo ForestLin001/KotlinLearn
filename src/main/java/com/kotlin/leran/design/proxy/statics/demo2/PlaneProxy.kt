@@ -7,21 +7,21 @@ package com.kotlin.leran.design.proxy.statics.demo2
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class PlaneProxy(private val proxy : IStaticTicket) : IStaticTicket {
+class PlaneProxy(private val proxy: IStaticTicket) : IStaticTicket {
 
-    override fun buyTicket(travel : String, price : Double) {
+    override fun buyTicket(travel: String, price: Double) {
         doBefore()
         proxy.buyTicket(travel, price)
         doAfter()
     }
 
-    private fun doBefore(){
+    private fun doBefore() {
         println("去机票代售点")
         println("开始身份验证")
         println("...")
     }
 
-    private fun doAfter(){
+    private fun doAfter() {
         println("确认班次、座位等信息")
         println("付款")
         println("...")

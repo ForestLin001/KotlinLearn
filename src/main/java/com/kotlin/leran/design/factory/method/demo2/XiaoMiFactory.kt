@@ -7,9 +7,9 @@ package com.kotlin.leran.design.factory.method.demo2
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class XiaoMiFactory : IChinaFactory{
+class XiaoMiFactory : IChinaFactory {
 
-    override fun createPhone(type : String, time : String): IPhone {
+    override fun createPhone(type: String, time: String): IPhone {
         return XiaoMiPhone(type, time)
     }
 

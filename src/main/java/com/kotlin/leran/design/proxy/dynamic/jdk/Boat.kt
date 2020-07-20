@@ -7,7 +7,7 @@ package com.kotlin.leran.design.proxy.dynamic.jdk
  * Email          :  zhengxcfutures@gmail.com
  * Version        :  v-1.0.1
  */
-class Boat : IDynamicTicket{
+class Boat : IDynamicTicket {
 
     override fun buyTicket(travel: String, price: Double) {
         println("我买船票, 行程为： ${travel}, 价格是：${price}元")
